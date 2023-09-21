@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        #content {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(7, 100px);
+            grid-gap: 10px;
+        }
+        #content div {
+            background-color: lightgray;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .kotak1, .kotak10, .kotak11 {
+            grid-area: span 2 / span 2;
+        }
+        .kotak8 {
+            grid-column: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="kotak1">1</div>
+        <div class="kotak2">2</div>
+        <div class="kotak3">3</div>
+        <div class="kotak4">4</div>
+        <div class="kotak5">5</div>
+        <div class="kotak6">6</div>
+        <div class="kotak7">7</div>
+        <div class="kotak8">8</div>
+        <div class="kotak9">9</div>
+        <div class="kotak10">10</div>
+        <div class="kotak11">11</div>
+        <div class="kotak12">12</div>
+        <div class="kotak13">13</div>
+        <div class="kotak14">14</div>
+        <div class="kotak15">15</div>
+        <div class="kotak16">16</div>
+        <div class="kotak17">17</div>
+    </div>
+</body>
+</html>
