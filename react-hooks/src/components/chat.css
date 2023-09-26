@@ -1,0 +1,67 @@
+.container {
+    width: 600px;
+    /* height: 300px; */
+    padding: 0  0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 5px solid blue;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    background-color: blue;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.textArea {
+    width: 300px;
+    height: 100px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightskyblue;
+    color: lightskyblue;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.message {
+    background-color: blue;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 15px 15px 15px 0;
+    font-size: 20px;
+}
