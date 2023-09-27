@@ -7,7 +7,7 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import { DeleteIcon } from "@chakra-ui/icons";
+import { DeleteIcon, AddIcon } from "@chakra-ui/icons";
 import { useState, useRef } from "react";
 
 function Home() {
@@ -23,8 +23,18 @@ function Home() {
         description: "Invalid Task",
         status: "error",
         duration: 1000,
-        position: 'top-left',
+        position: "top-left",
+        isClosable: true
       });
+    } else if (list.findIndex(v => v.task === task) !== -1) {
+        toast({
+            title: "Error",
+            description: "Duplicate Task",
+            status: "error",
+            duration: 1000,
+            position: "top-left",
+            isClosable: true
+        });
     } else {
       setList([...list, { task: task, isDone: false }]);
     }
@@ -32,15 +42,15 @@ function Home() {
   };
 
   const onDelete = (index) => {
-    let newList = [...list]
-    newList.splice(index, 1)
-    setList([...newList])
+    let newList = [...list];
+    newList.splice(index, 1);
+    setList([...newList]);
   };
 
   const onDone = (index) => {
-    let newList = [...list]
-    newList[index].isDone = !newList[index].isDone
-    setList([...newList])
+    let newList = [...list];
+    newList[index].isDone = !newList[index].isDone;
+    setList([...newList]);
   };
 
   return (
@@ -63,7 +73,7 @@ function Home() {
           ref={itemRef}
         />
         <Button colorScheme="teal" onClick={onAdd}>
-          add
+          <AddIcon />
         </Button>
       </Flex>
       <Flex
