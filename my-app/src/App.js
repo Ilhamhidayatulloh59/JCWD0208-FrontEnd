@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>INI HOME</h1>
+      {/* <h1>INI HOME</h1>
       <button onClick={onStorage}>Storage</button>
-      <Counter />
+      <Counter /> */}
       <Home />
     </div>
   );
