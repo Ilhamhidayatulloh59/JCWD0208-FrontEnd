@@ -15,12 +15,13 @@ import { DeleteIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-export const UserList = () => {
+export const UserList = ({ reload, setReload }) => {
   const data = useSelector((state) => state.users.value);
 
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:2000/users/${id}`);
+      setReload(!reload)
     } catch (err) {
       console.log(err);
     }

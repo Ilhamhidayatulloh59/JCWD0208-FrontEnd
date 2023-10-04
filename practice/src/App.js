@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
@@ -9,6 +9,7 @@ import { setData } from "./redux/userSlice";
 
 function App() {
   const dispatch = useDispatch()
+  const [reload, setReload] = useState(false)
 
   const getData = async () => {
     try {
@@ -21,14 +22,14 @@ function App() {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [reload])
 
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/users" element={<UserList />} />
+        <Route path="/" element={<Register reload={reload} setReload={setReload} />} />
+        <Route path="/users" element={<UserList reload={reload} setReload={setReload} />} />
       </Routes>
     </div>
   );

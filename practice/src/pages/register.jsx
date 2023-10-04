@@ -31,7 +31,7 @@ const RegisterSchema = Yup.object().shape({
     ),
 });
 
-export const Register = () => {
+export const Register = ({ reload, setReload }) => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const toast = useToast();
@@ -39,6 +39,7 @@ export const Register = () => {
   const handleSubmit = async (data) => {
     try {
       await axios.post("http://localhost:2000/users", data);
+      setReload(!reload)
       toast({
         title: "Success",
         description: "Register success",
