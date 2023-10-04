@@ -18,5 +18,7 @@
       "password": "Asd1234!",
       "id": 5
     }
-  ]
+  ],
+  "transactions": [],
+  "events": []
 }
