@@ -61,6 +61,12 @@
       "email": "aman@gmail.com",
       "tweet": "First Tweet !",
       "id": 6
+    },
+    {
+      "username": "Muh Aman Hidayat",
+      "email": "aman@gmail.com",
+      "tweet": "Gabut",
+      "id": 7
     }
   ]
 }
